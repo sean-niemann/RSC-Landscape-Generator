@@ -10,7 +10,7 @@ For Jag (maps28 and over), [*input/jag/maps.jag; input/jag/land.jag; input/jag/m
 
 For Jag Legacy (maps27 and under), [*input/jag-legacy/maps.jag*]
 
-*Note: I've preloaded some maps for each type in the zip file already*
+*Note: I've already preloaded some maps for each file format*
 
 ##Running
 java -jar mapgen.jar [rscd|jag|jag-legacy]

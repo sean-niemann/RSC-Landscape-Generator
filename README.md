@@ -1,17 +1,17 @@
 # RSC-Landscape-Generator
 Command line tool to generate a visual representation for every format of the RS Classic (RSC) landscape files.
 
-**Loading**
+###Loading
 Drag landscape files into the appropriate directory for its type
 For RSCD, [*input/rscd/Landscape.rscd*]
 For Jag (maps28 and over), [*input/jag/maps.jag; input/jag/land.jag; input/jag/maps.mem; input/jag/land.mem*]
 For Jag Legacy (maps27 and under), [*input/jag-legacy/maps.jag*]
 
-**Running**
+###Running
 java -jar mapgen.jar [rscd|jag|jag-legacy]
 *Note: I've preloaded some maps for each type in the zip file already*
 
-**It's pretty interesting to see how the development of the rsc world progressed**
+##It's pretty interesting to see how the development of the rsc world progressed
 map14  (Creation of major cities and player owned houses) - [PICTURE](http://i.imgur.com/ajV79i1.png "map14")
 map19 (Creation of karamja volcano) - [PICTURE](http://i.imgur.com/6VdrKVY.png "map19")
 map22 (Removal of player owned houses in varrock and falador) - [PICTURE](http://i.imgur.com/POWUYST.png "map22")

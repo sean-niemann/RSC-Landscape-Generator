@@ -30,3 +30,5 @@ Here's an ingame screenshot of map14 at varrock POH's - [PICTURE](http://i.imgur
 
 ###Here's an example for what this generator will produce for the RSCD file format:
 ![RSCD Example](http://i.imgur.com/qPLZVpD.png "RSCD Example")
+
+###Here's a legacy map pack (.zip) if you're curious to test them out yourself - [LINK](https://www.dropbox.com/s/4q4ue36xp8qxoaf/legacy-maps.zip?dl=0 "Legacy Map Pack")

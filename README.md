@@ -13,7 +13,7 @@ For Jag Legacy (maps27 and under), [*input/jag-legacy/maps.jag*]
 *Note: I've already preloaded some maps for each file format*
 
 ##Running
-java -jar mapgen.jar [rscd|jag|jag-legacy]
+java -jar dist/mapgen.jar [rscd|jag|jag-legacy]
 
 ###It's pretty interesting to see how the development of the rsc world progressed
 map14  (Creation of major cities and player owned houses) - [PICTURE](http://i.imgur.com/ajV79i1.png "map14")

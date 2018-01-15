@@ -294,7 +294,7 @@ public class BZip {
                         else if (nextSym == 1)
                             es += 2 * N;
                         N *= 2;
-                        // GETMTFVAL, y da fuk did they not subroutine this
+                        // GETMTFVAL, should be subroutined honestly...
                         if (groupPos == 0) {
                             groupNo++;
                             groupPos = 50;

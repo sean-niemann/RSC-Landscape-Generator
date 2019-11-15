@@ -1,5 +1,5 @@
 # RSC-Landscape-Generator
-Command line tool to generate a visual representation for every format of the RS Classic (RSC) landscape files.
+Command line tool to generate a visual representation for every format of the Runescape Classic (RSC) landscape files.
 
 ## Loading
 Drag landscape files into the appropriate directory for its type

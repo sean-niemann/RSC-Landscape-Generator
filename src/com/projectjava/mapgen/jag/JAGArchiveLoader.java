@@ -31,6 +31,7 @@ public class JAGArchiveLoader implements FileLoader {
     
     public JAGArchive loadArchive(String file) {
         byte[] archive = load(file);
+        System.out.println(file);
         return new JAGArchive(archive);
     }
 

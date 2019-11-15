@@ -1,6 +1,8 @@
 package com.projectjava.mapgen.util;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Config {
 
@@ -9,6 +11,9 @@ public class Config {
     
     // The size of a packed sector
     public static final int SECTOR_HEIGHT = 48;
+
+    // The gap between each floor (for accurate coordinates)
+    public static final int IMAGE_GAP = 96;
     
     // The width of the image
     public static final int SECTOR_IMAGE_WIDTH = SECTOR_WIDTH * 3;
@@ -41,4 +46,7 @@ public class Config {
     public static final String OUTPUT_DIR = "";
     //System.getProperty("user.dir") + File.separator + "out" + File.separator;
 
+    // You can fill these with extra filenames if you wish.
+    public static HashMap<Integer, String> allPossibleHashes = new HashMap<Integer, String>();
+    public static ArrayList<String> existingFilenames = new ArrayList<String>();
 }

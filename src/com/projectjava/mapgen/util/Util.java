@@ -54,11 +54,11 @@ public class Util {
         type = images[0].getType();
         chunkWidth = images[0].getWidth();
         chunkHeight = images[0].getHeight();
-        BufferedImage finalImg = new BufferedImage(chunkWidth*cols, chunkHeight*rows, type);
+        BufferedImage finalImg = new BufferedImage(chunkWidth * cols, chunkHeight * rows + Config.IMAGE_GAP * 3, type);
         int num = 0;
         for(int i = 0; i < rows; i++) {
             for(int j = 0; j < cols; j++) {
-                finalImg.createGraphics().drawImage(images[num], chunkWidth * j, chunkHeight * i, null);
+                finalImg.createGraphics().drawImage(images[num], chunkWidth * j, chunkHeight * i + Config.IMAGE_GAP * num, null);
                 num++;
             }
         }

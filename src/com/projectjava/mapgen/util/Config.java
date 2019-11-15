@@ -11,6 +11,9 @@ public class Config {
     
     // The size of a packed sector
     public static final int SECTOR_HEIGHT = 48;
+
+    // The gap between each floor (for accurate coordinates)
+    public static final int IMAGE_GAP = 96;
     
     // The width of the image
     public static final int SECTOR_IMAGE_WIDTH = SECTOR_WIDTH * 3;

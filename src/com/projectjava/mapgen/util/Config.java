@@ -1,6 +1,8 @@
 package com.projectjava.mapgen.util;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Config {
 
@@ -41,4 +43,7 @@ public class Config {
     public static final String OUTPUT_DIR = "";
     //System.getProperty("user.dir") + File.separator + "out" + File.separator;
 
+    // You can fill these with extra filenames if you wish.
+    public static HashMap<Integer, String> allPossibleHashes = new HashMap<Integer, String>();
+    public static ArrayList<String> existingFilenames = new ArrayList<String>();
 }

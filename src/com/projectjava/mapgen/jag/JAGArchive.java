@@ -1,8 +1,12 @@
 package com.projectjava.mapgen.jag;
 
 import com.projectjava.mapgen.jag.bzip.BZip;
+import com.projectjava.mapgen.util.Config;
+import com.sun.security.auth.UnixNumericGroupPrincipal;
 
+import java.math.BigInteger;
 import java.nio.ByteBuffer;
+import java.util.HashMap;
 
 public class JAGArchive implements FileLoader {
 
@@ -12,6 +16,7 @@ public class JAGArchive implements FileLoader {
 
     public JAGArchive(byte[] archive) {
         numArchives = (archive[0] & 0xff) * 256 + (archive[1] & 0xff);
+        System.out.println(String.format("number of files in archive: %d", numArchives));
         files = new JAGFile[numArchives];
 
         int offset = 2 + numArchives * 10;
@@ -30,6 +35,8 @@ public class JAGArchive implements FileLoader {
             }
             offset += compLen;
             files[i] = new JAGFile(hash, fileData);
+            Config.existingFilenames.add(Config.allPossibleHashes.get(hash).substring(0,6));
+            // System.out.println(String.format("hash: %d, filename: %s", hash, Config.allPossibleHashes.get(hash)));
         }
     }
 
@@ -57,18 +64,4 @@ public class JAGArchive implements FileLoader {
         }
         return hash;
     }
-
-    // doesn't work (impossible) due to numeric overflow
-    public static String decodeFileHash(int hash) {
-        long realHash = (hash < 0 ? Integer.MAX_VALUE + Math.abs(hash) : hash);
-        ByteBuffer buffer = ByteBuffer.allocate(50);
-
-        while(realHash > 0) {
-            buffer.put((byte) ((realHash % 61) + 32));
-            realHash = (realHash - 32) / 61;
-        }
-        buffer.flip();
-        return new String(buffer.array()).trim();
-    }
-
 }

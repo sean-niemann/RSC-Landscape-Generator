@@ -60,16 +60,17 @@ public abstract class Generator {
         BufferedImage finalImage;
         File file = new File(Config.OUTPUT_DIR + "map." + Config.IMAGE_EXTENSION);
         process();
-        finalImage = Util.joinImages(level0Image, level3Image, level1Image, level2Image);
+        finalImage = Util.joinImages(level0Image, level1Image, level2Image, level3Image);
         finalImage = Util.flipXAxis(finalImage);
         int x = Config.FINAL_IMAGE_WIDTH / 2;
         int y = Config.FINAL_IMAGE_HEIGHT;
         Graphics graphics = finalImage.getGraphics();
-        graphics.setFont(new Font("Arial", Font.BOLD, 48));
-        graphics.drawString("Ground Floor", x, 100);
-        graphics.drawString("Underground", x, y + 100);
-        graphics.drawString("First Floor", x, y * 2 + 100);
-        graphics.drawString("Second Floor", x, y * 3 + 100);
+        graphics.setFont(new Font("Arial", Font.BOLD, 80));
+        graphics.drawString("Ground Floor", 50, 100);
+        graphics.drawString("First Floor", 50, y * 1 + 100);
+        graphics.drawString("Second Floor", 50, y * 2 + 100);
+        graphics.drawString("Third Floor / Underground", 50, y * 3 + 100);
+
         
         System.out.println("\nWriting image to " + Config.OUTPUT_DIR + "map.png");
         
@@ -92,7 +93,7 @@ public abstract class Generator {
         return image;
     }
     
-    private void applySector(BufferedImage image) {    
+    private void applySector(BufferedImage image) {
         Graphics gfx = image.getGraphics();
         for(int x = 0; x < Config.SECTOR_IMAGE_WIDTH - 1; ++x) {
             for(int y = 0; y < Config.SECTOR_IMAGE_HEIGHT - 1; ++y) {

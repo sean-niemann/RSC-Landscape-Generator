@@ -23,7 +23,7 @@ public class RSCDGenerator extends Generator {
         try {
             tileArchive = new ZipFile(fileName);
         } catch(IOException e) {
-            System.out.println("Cannot locate landscape file: " + fileName);
+            System.err.println("Cannot locate landscape file: " + fileName);
             System.exit(1);
         }
         length = 1292;

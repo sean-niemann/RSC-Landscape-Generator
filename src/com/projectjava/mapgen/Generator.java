@@ -13,6 +13,14 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
+/**
+ *
+ * RSC Landscape Generator
+ *
+ *
+ * @author Sean Niemann (Zoso)
+ * @aurhoe Zack Penn    (Hixk)
+ */
 public abstract class Generator {
     
     public static void main(String[] args) {

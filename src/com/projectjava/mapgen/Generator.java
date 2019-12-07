@@ -19,7 +19,7 @@ import javax.imageio.ImageIO;
  *
  *
  * @author Sean Niemann (Zoso)
- * @aurhoe Zack Penn    (Hikilaka)
+ * @author Zack Penn    (Hikilaka)
  */
 public abstract class Generator {
     
